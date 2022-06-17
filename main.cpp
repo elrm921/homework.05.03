@@ -15,12 +15,7 @@ class Figure {
             std::cout << std::endl;
         }
         virtual bool check() {
-            if (sides == 0) {
-                return true;
-            }
-            else {
-                return false;
-            }
+            return true;
         }
     protected:
         Figure(std::string name, int sides) {
@@ -59,7 +54,7 @@ class Triangle : public Figure {
             std::cout << "A = " << A << " B = " << B << " C = " << C << "\n";
         }
         bool check() {
-            if (A + B + C == 180) {
+            if (a > 0 && b > 0 && c > 0 && A + B + C == 180) {
                 return true;
             }
             else {
@@ -109,7 +104,7 @@ class Quadrangle : public Figure {
             std::cout << "A = " << A << " B = " << B << " C = " << C << " D = " << D << "\n";
         }
         bool check() {
-            if (A + B + C + D == 360) {
+            if (a > 0 && b > 0 && c > 0 && d > 0 && A + B + C + D == 360) {
                 return true;
             }
             else {
